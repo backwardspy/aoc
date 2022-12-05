@@ -53,14 +53,10 @@ def parse_crate_stacks(lines: FileLines) -> tuple[FileLines, CrateStacks]:
 
     stacks: CrateStacks = [[] for _ in range(n_columns)]
     for line in header_lines:
-        # parse each line by breaking it up into chunks of 4
-        crate_segments = (line[i * 4 : (i + 1) * 4] for i in range(n_columns))
-
-        for i, segment in enumerate(crate_segments):
-            crate = segment.strip()
-            if crate:
+        for i, crate in enumerate(line[1::4]):
+            if crate != " ":
                 # we're building the columns top-down, so we have to insert at the bottom
-                stacks[i].insert(0, crate[1])
+                stacks[i].insert(0, crate)
 
     return lines, stacks
 
