@@ -172,8 +172,8 @@ mod part2 {
 fn main() -> Result<(), Box<dyn Error>> {
     let input = read_input("day2")?;
     let part_1: i32 = input
-        .split("\n")
-        .filter(|line| line.len() > 0)
+        .split('\n')
+        .filter(|line| line.is_empty())
         .map(part1::line_to_score)
         .collect::<Result<Vec<i32>, AOCError>>()?
         .into_iter()
@@ -181,8 +181,8 @@ fn main() -> Result<(), Box<dyn Error>> {
     println!("part 1: {}", part_1);
 
     let part_2: i32 = input
-        .split("\n")
-        .filter(|line| line.len() > 0)
+        .split('\n')
+        .filter(|line| line.is_empty())
         .map(part2::line_to_score)
         .collect::<Result<Vec<i32>, AOCError>>()?
         .into_iter()
