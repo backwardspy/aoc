@@ -10,7 +10,7 @@ pub fn read_input(day: &str) -> Result<String, io::Error> {
     fs::read_to_string(path)
 }
 
-#[derive(Debug)]
+#[derive(Debug, Clone, Copy)]
 pub enum AOCError {
     BadInput,
     LogicError,
