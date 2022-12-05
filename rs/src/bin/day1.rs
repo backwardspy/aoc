@@ -8,7 +8,7 @@ fn main() -> Result<(), Box<dyn Error>> {
         .split("\n\n")
         .map(|block| {
             block
-                .split("\n")
+                .split('\n')
                 .map(|number| number.parse::<i32>())
                 .collect::<Result<Vec<_>, _>>()
                 .map(|counts| counts.into_iter().sum())
@@ -20,7 +20,7 @@ fn main() -> Result<(), Box<dyn Error>> {
     let solution_1 = sums[0];
     println!("solution 1: {solution_1}");
 
-    let solution_2: i32 = sums[..3].into_iter().sum();
+    let solution_2: i32 = sums[..3].iter().sum();
     println!("solution 2: {solution_2}");
 
     Ok(())
