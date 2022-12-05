@@ -1,3 +1,5 @@
-input
+inputs/
 test_input
 __pycache__
+rs/target/
+rs/Cargo.lock

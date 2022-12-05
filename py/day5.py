@@ -26,7 +26,7 @@ move_pattern = re.compile(r"^move (\d+) from (\d+) to (\d+)$")
 
 def input_lines() -> FileLines:
     """yield lines from the input file with trailing newlinews removed."""
-    with open("input", "r", encoding="utf-8") as input_file:
+    with open("inputs/day5", "r", encoding="utf-8") as input_file:
         lines = (line.rstrip("\n") for line in input_file)
         yield from lines
 

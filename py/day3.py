@@ -46,7 +46,7 @@ def find_duplicate(*groups: str) -> str:
 
 def iter_input() -> Iterator[str]:
     """yields lines from the input file."""
-    with open("input", encoding="utf-8") as input_file:
+    with open("inputs/day3", encoding="utf-8") as input_file:
         yield from (line.strip() for line in input_file)
 
 

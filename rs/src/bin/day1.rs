@@ -1,15 +1,10 @@
-//! this solution is effectively the same as bulk python one.
-//! the main difference is we let the compiler just embed the whole file into
-//! the binary rather than reading it at runtime. there's not really a good
-//! reason for this, other than to offer another alternative method.
-//! i also use rust's functional idioms rather than the more imperative
-//! approach taken in the python implementations.
 use std::error::Error;
 
-const INPUT: &'static str = include_str!("input");
+use aoc_rs::read_input;
 
 fn main() -> Result<(), Box<dyn Error>> {
-    let mut sums = INPUT
+    let input = read_input("day1")?;
+    let mut sums = input
         .split("\n\n")
         .map(|block| {
             block

@@ -4,7 +4,7 @@ InclusiveRange = namedtuple("InclusiveRange", "start stop")
 
 
 def input_lines():
-    with open("input") as f:
+    with open("inputs/day4") as f:
         lines = (line.strip() for line in f)
         yield from lines
 

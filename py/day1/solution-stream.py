@@ -1,13 +1,11 @@
 # this solution is optimised for memory usage rather than code size.
 # we avoid reading the entire file in one chunk, and we only hold on to the
 # bare minimum of what we need to calculate the answers.
-from pathlib import Path
 import re
 
 split = re.compile("\n\n")
-inputs = Path("input")
 
-with inputs.open("r") as inputs_file:
+with open("inputs/day1", "r") as inputs_file:
     largest = [0, 0, 0]
     accumulator = 0
     for line in inputs_file:
