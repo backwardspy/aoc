@@ -31,9 +31,11 @@ scores_part_2 = {
     "C Z": 6 + 1,
 }
 
+
 def score(scores: dict[str, int]):
     with open("inputs/day2", "r") as inputs:
         return sum(scores[line.strip()] for line in inputs)
+
 
 print(f"part 1: {score(scores_part_1)}")
 print(f"part 2: {score(scores_part_2)}")

@@ -1,5 +1,5 @@
 # this solution is optimised for memory usage rather than code size.
-# we avoid reading the entire file in one chunk, and we only hold on to the
+# we avoid reading the entire file in one chunk, and we only hold on to the
 # bare minimum of what we need to calculate the answers.
 import re
 
@@ -20,4 +20,3 @@ with open("inputs/day1", "r") as inputs_file:
 
 print(f"solution 1: {max(largest)}")
 print(f"solution 2: {sum(largest)}")
-
